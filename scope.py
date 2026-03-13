@@ -1,10 +1,14 @@
-texto=()
-entero=()
+texto=None
+entero=None
 
-def some_int():
-    global entero 
-    return int(entero)
+def set_globals(some_int, some_str):
+    global global_int, global_str
+    global_int=some_int
+    global_str=some_str
 
-def some_str():
-    global texto
-    return str(texto)
+def get_globals():
+    return(global_int,global_str)
+       
+#print(get_globals())     
+#set_globals(10, "Hello")
+#print(get_globals())  
