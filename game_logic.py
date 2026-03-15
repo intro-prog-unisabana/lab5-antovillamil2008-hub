@@ -1,19 +1,25 @@
-from secret_number import generate_secret_number
-from secret_number import seed_secret_numbers
+from secret_number import seed_secret_numbers, generate_secret_number
+from response import input_response
 contador=0
+aciertos=False
 
-# print(numero_secreto)
-while True:
+
+semilla=int(input("Enter a seed number:\n"))
+seed_secret_numbers(semilla)
+    
+secreto=generate_secret_number()
+
+while not aciertos:
     guess=int(input("What is your guess:"))
-    if guess<secret_numbre:
+    contador+=1
+    message, guessed_correctly = input_response(secreto , guess)
+    if guess<secreto:
         print("Too low! Try a higher number.")
-        contador+=1
-    elif guess>numero_secreto:
+    elif guess>secreto:
         print("Too high! Try a lower number.")
-        contador+=1
-    elif guess==numero_secreto:
+    else:
         print("Correct! You guessed the number!")
         break
 
 print(f"It took you {contador} tries!")
-   
+

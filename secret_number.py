@@ -1,6 +1,6 @@
 import random
 def seed_secret_numbers(seed):
-    seed=int(input("Enter a seed number:"))
+    random.seed(seed)
 
-def generate_secret_number(numero):
-    numero= random.randint(1, 100)
+def generate_secret_number(start=1, end=100):
+    return random.randint(start, end)
