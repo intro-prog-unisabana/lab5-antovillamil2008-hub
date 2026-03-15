@@ -13,7 +13,7 @@ y = int(input("Enter a number:\n"))
 z = int(input("Enter a number:\n"))
 #FREEZE CODE END
 
-print("Maximum value:", maximum)
+print("Maximum value:", max)
 
 
 
