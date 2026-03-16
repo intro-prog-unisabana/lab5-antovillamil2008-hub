@@ -4,6 +4,6 @@ from mystery_module import transform_data
 x = int(input())
 y = float(input())
 # FREEZE CODE END
-resultado=transform_data(x,y,"quizz_test")
+resultado=transform_data(x,y,"quiz_test")
 print(resultado)
 
